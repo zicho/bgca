@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                      Int              @id @default(autoincrement())
+  supabase_user_id        String           @unique
+  email                   String           @unique
+  name                    String           @unique
+  posts                   Post[]
+  profile                 Profile?
+  PrivateMessageSender    PrivateMessage[] @relation("sender")
+  PrivateMessageRecipient PrivateMessage[] @relation("recipient")
+}
+
+model Post {
+  id        Int     @id @default(autoincrement())
+  title     String
+  content   String?
+  published Boolean @default(false)
+  author    User?   @relation(fields: [authorId], references: [id])
+  authorId  Int?
+}
+
+model Profile {
+  id      Int     @id @default(autoincrement())
+  content String? @default("This user has not yet created a profile")
+  user    User    @relation(fields: [userId], references: [id])
+  userId  Int     @unique // relation scalar field (used in the `@relation` attribute above)
+}
+
+model PrivateMessage {
+  id      Int    @id @default(autoincrement())
+  content String
+
+  sender      User @relation("sender", fields: [senderId], references: [id])
+  senderId    Int
+  recipient   User @relation("recipient", fields: [recipientId], references: [id])
+  recipientId Int
+}

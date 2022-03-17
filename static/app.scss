@@ -1,0 +1,182 @@
+@use '@material/theme/color-palette';
+@import '@material/typography/mdc-typography';
+
+:root {
+	--mg-xs: 3px;
+	--mg-s: 5px;
+	--mg-m: 8px;
+	--mg-xm: 13px;
+	--mg-l: 21px;
+	--mg-xl: 34px;
+	--mg-xxl: 55px;
+
+	font-family: Roboto;
+
+--font-mono: 'Fira Mono', monospace;
+}
+
+/* standard layout margin classes */
+
+/* eXtra Small */
+.margin-xs {
+	margin: var(--mg-xs);
+}
+
+.margin-top-xs {
+	margin-top: var(--mg-xs);
+}
+
+.margin-right-xs {
+	margin-right: var(--mg-xs);
+}
+
+.margin-bottom-xs {
+	margin-bottom: var(--mg-xs);
+}
+
+.margin-left-xs {
+	margin-left: var(--mg-xs);
+}
+
+/* Small */
+.margin-s {
+	margin: var(--mg-s);
+}
+
+.margin-top-s {
+	margin-top: var(--mg-s);
+}
+
+.margin-right-s {
+	margin-right: var(--mg-s);
+}
+
+.margin-bottom-s {
+	margin-bottom: var(--mg-s);
+}
+
+.margin-left-s {
+	margin-left: var(--mg-s);
+}
+
+/* Medium */
+.margin-m {
+	margin: var(--mg-m);
+}
+
+.margin-top-m {
+	margin-top: var(--mg-m);
+}
+
+.margin-right-m {
+	margin-right: var(--mg-m);
+}
+
+.margin-bottom-m {
+	margin-bottom: var(--mg-m);
+}
+
+.margin-left-m {
+	margin-left: var(--mg-m);
+}
+
+/* eXtra Medium */
+.margin-xm {
+	margin: var(--mg-xm);
+}
+
+.margin-top-xm {
+	margin-top: var(--mg-xm);
+}
+
+.margin-right-xm {
+	margin-right: var(--mg-xm);
+}
+
+.margin-bottom-xm {
+	margin-bottom: var(--mg-xm);
+}
+
+.margin-left-xm {
+	margin-left: var(--mg-xm);
+}
+
+/* Large */
+.margin-l {
+	margin: var(--mg-l);
+}
+
+.margin-top-l {
+	margin-top: var(--mg-l);
+}
+
+.margin-right-l {
+	margin-right: var(--mg-l);
+}
+
+.margin-bottom-l {
+	margin-bottom: var(--mg-l);
+}
+
+.margin-left-l {
+	margin-left: var(--mg-l);
+}
+
+/* eXtra xlarge */
+.margin-xl {
+	margin: var(--mg-xl);
+}
+
+.margin-top-xl {
+	margin-top: var(--mg-xl);
+}
+
+.margin-right-xl {
+	margin-right: var(--mg-xl);
+}
+
+.margin-bottom-xl {
+	margin-bottom: var(--mg-xl);
+}
+
+.margin-xleft-xl {
+	margin-left: var(--mg-xl);
+}
+
+/* eXtra eXtra Large */
+.margin-xxl {
+	margin: var(--mg-xxl);
+}
+
+.margin-top-xxl {
+	margin-top: var(--mg-xxl);
+}
+
+.margin-right-xxl {
+	margin-right: var(--mg-xxl);
+}
+
+.margin-bottom-xxl {
+	margin-bottom: var(--mg-xxl);
+}
+
+.margin-left-xxl {
+	margin-left: var(--mg-xxl);
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.login-container {
+    padding: var(--mg-xl);
+    border: 2px solid  #ECEFF1;
+    border-radius: var(--mg-s);
+	margin-top: var(--mg-xxl)
+}
